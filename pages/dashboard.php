@@ -1,0 +1,1 @@
+<img src="dist/img/photo1.png" style="width:100%;" alt="">
