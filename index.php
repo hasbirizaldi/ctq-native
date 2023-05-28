@@ -48,9 +48,9 @@ require "koneksi.php";
     <div class="wrapper">
 
         <!-- Preloader -->
-        <!-- <div class="preloader flex-column justify-content-center align-items-center">
+        <div class="preloader flex-column justify-content-center align-items-center">
             <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
-        </div> -->
+        </div>
 
         <!-- Navbar -->
         <nav class="main-header navbar navbar-expand navbar-white navbar-light fixed-top">
@@ -97,7 +97,7 @@ require "koneksi.php";
                 </li>
                 <li>
                     <a onclick="return confirm('Apakah anda yakin akan keluar?')" href="logout.php"
-                        class="nav-link btn btn-sm btn-danger">Keluar</a>
+                        class="nav-link btn btn-sm btn-danger text-light"><i class="fas fa-sign-out-alt"></i></a>
                 </li>
             </ul>
         </nav>

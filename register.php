@@ -110,7 +110,7 @@ if(isset($_POST['daftar'])){
                             <input type="text" class="form-control" placeholder="Nama lengkap" name="nama">
                             <div class="input-group-append">
                                 <div class="input-group-text">
-                                    <span class="fas fa-envelope"></span>
+                                    <i class="fas fa-user"></i>
                                 </div>
                             </div>
                         </div>
@@ -118,7 +118,7 @@ if(isset($_POST['daftar'])){
                             <input type="text" class="form-control" placeholder="Username" name="username">
                             <div class="input-group-append">
                                 <div class="input-group-text">
-                                    <span class="fas fa-envelope"></span>
+                                    <i class="fas fa-user"></i>
                                 </div>
                             </div>
                         </div>

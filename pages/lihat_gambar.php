@@ -14,7 +14,7 @@ $show = mysqli_fetch_assoc($data);
                 <h3 class="card-title">Detail Data</h3>
             </div>
             <div class="card-body">
-                <img src="leak_tester/<?=$show['gambar']?>" style="width:800px; height:600px" alt="">
+                <img src="leak_tester/<?=$show['gambar']?>" style="width:100%; height:600px" alt="">
             </div>
             <!-- /.card-body -->
             <div class="card-footer">

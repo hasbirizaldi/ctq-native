@@ -8,6 +8,22 @@ if(isset($_SESSION['masuk'])){
 }
 require 'koneksi.php';
 
+// cek cookie
+if(isset($_COOKIE['id']) && isset($_COOKIE['key'])){
+    $id = $_COOKIE['id'];
+    $key = $_COOKIE['key'];
+
+    // ambil username berdasarkan ID
+    $result = mysqli_query($conn, "SELECT username FROM user WHERE id = $id");
+
+    $row=mysqli_fetch_assoc($result);
+
+    // cek cookie dan username
+    if($key===hash('sha256', $row['username'])){
+        $_SESSION['login']=true;
+    }
+}
+
 if(isset($_POST['masuk'])){
 
     $username = $_POST['username'];
@@ -24,6 +40,17 @@ if(isset($_POST['masuk'])){
 
             // SET SESSION
             $_SESSION['masuk']=true;
+
+            // cek remember me
+            if(isset($_POST['remember'])){
+                // buat cookie
+
+                setcookie('id',$row['id'], time()+60);
+                
+                setcookie('key',hash('sha256', $row['username']), time()+60);
+            }
+
+            
             echo "<script>
                 alert('Anda berhasil login');
                 document.location.href = 'index.php?p=dashboard';
